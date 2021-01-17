@@ -54,6 +54,17 @@ a Graphql Configuration inside a plugin:
       }  
       
     }
+and a Graphql schema file:
+
+    # The Root Query for the application
+    extend type Query {
+        getSomething(count: Int, offset: Int): [Something]!
+    }
+    
+    # The Root Mutation for the application
+    extend type Mutation {
+        createSomething(name: String!) : Something!
+    }
 
 ## Main Dependencies
 
