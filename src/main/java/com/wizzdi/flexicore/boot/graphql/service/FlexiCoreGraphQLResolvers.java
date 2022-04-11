@@ -1,8 +1,9 @@
 package com.wizzdi.flexicore.boot.graphql.service;
 
-import com.coxautodev.graphql.tools.*;
-import com.oembedler.moon.graphql.boot.SchemaStringProvider;
+
 import com.wizzdi.flexicore.boot.base.init.FlexiCorePluginManager;
+import graphql.kickstart.autoconfigure.tools.SchemaStringProvider;
+import graphql.kickstart.tools.*;
 import graphql.schema.GraphQLScalarType;
 import org.pf4j.PluginWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +48,7 @@ public class FlexiCoreGraphQLResolvers {
 			resolvers.addAll(beansOfType.values().stream().map(f->(GraphQLResolver<?>)f).collect(Collectors.toList()));
 
 		}
-		SchemaParserBuilder builder = dictionary != null ? new SchemaParserBuilder(dictionary) : new SchemaParserBuilder();
+		SchemaParserBuilder builder = dictionary != null ? new SchemaParserBuilder().dictionary(dictionary.getDictionary()) : new SchemaParserBuilder();
 
 		List<String> schemaStrings = schemaStringProvider.schemaStrings();
 		schemaStrings.forEach(builder::schemaString);

@@ -1,6 +1,7 @@
 package com.wizzdi.flexicore.boot.graphql.pluginA;
 
-import com.coxautodev.graphql.tools.GraphQLResolver;
+
+import graphql.kickstart.tools.GraphQLResolver;
 
 public class PostResolver implements GraphQLResolver<Post> {
     private AuthorDao authorDao;

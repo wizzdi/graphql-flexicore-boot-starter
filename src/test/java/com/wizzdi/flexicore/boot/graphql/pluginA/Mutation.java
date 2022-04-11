@@ -1,6 +1,7 @@
 package com.wizzdi.flexicore.boot.graphql.pluginA;
 
-import com.coxautodev.graphql.tools.GraphQLMutationResolver;
+
+import graphql.kickstart.tools.GraphQLMutationResolver;
 
 import java.util.UUID;
 

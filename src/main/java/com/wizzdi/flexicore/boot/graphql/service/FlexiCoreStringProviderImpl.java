@@ -1,7 +1,7 @@
 package com.wizzdi.flexicore.boot.graphql.service;
 
-import com.oembedler.moon.graphql.boot.SchemaStringProvider;
 import com.wizzdi.flexicore.boot.base.init.FlexiCorePluginManager;
+import graphql.kickstart.autoconfigure.tools.SchemaStringProvider;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,6 +1,7 @@
 package com.wizzdi.flexicore.boot.graphql.pluginA;
 
-import com.coxautodev.graphql.tools.GraphQLQueryResolver;
+
+import graphql.kickstart.tools.GraphQLQueryResolver;
 
 import java.util.List;
 
